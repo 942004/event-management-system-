@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proceed to Payment</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('p1.jpg'); /* Replace 'background.jpg' with your image file */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      text-align: center;
+    }
+    input[type="text"], input[type="email"], input[type="number"], select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Proceed to Payment</h1>
+  <form action="payment_process.php" method="post">
+    <input type="text" name="full_name" placeholder="Full Name" required><br>
+    <input type="email" name="email" placeholder="Email Address" required><br>
+    <input type="number" name="card_number" placeholder="Card Number" required><br>
+    <input type="text" name="expiry_date" placeholder="Expiry Date (MM/YY)" required><br>
+    <input type="number" name="cvv" placeholder="CVV" required><br>
+    <select name="card_type" required>
+      <option value="">Select Card Type</option>
